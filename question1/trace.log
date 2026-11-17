@@ -1,0 +1,540 @@
+26877 09:39:43.561188 execve("./pipeline", ["./pipeline"], 0x7fff997a7280 /* 54 vars */) = 0
+26877 09:39:43.564281 brk(NULL)         = 0x5a8f72495000
+26877 09:39:43.564787 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71648dbca000
+26877 09:39:43.565279 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+26877 09:39:43.566029 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+26877 09:39:43.566295 fstat(3, {st_mode=S_IFREG|0644, st_size=109807, ...}) = 0
+26877 09:39:43.568036 mmap(NULL, 109807, PROT_READ, MAP_PRIVATE, 3, 0) = 0x71648dbaf000
+26877 09:39:43.568604 close(3)          = 0
+26877 09:39:43.568954 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+26877 09:39:43.569395 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+26877 09:39:43.569719 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26877 09:39:43.570019 fstat(3, {st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+26877 09:39:43.570237 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26877 09:39:43.570440 mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x71648d800000
+26877 09:39:43.570737 mmap(0x71648d828000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x71648d828000
+26877 09:39:43.571034 mmap(0x71648d9b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000) = 0x71648d9b1000
+26877 09:39:43.571231 mmap(0x71648da00000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000) = 0x71648da00000
+26877 09:39:43.571447 mmap(0x71648da06000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x71648da06000
+26877 09:39:43.571735 close(3)          = 0
+26877 09:39:43.571927 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x71648dbac000
+26877 09:39:43.572154 arch_prctl(ARCH_SET_FS, 0x71648dbac740) = 0
+26877 09:39:43.572311 set_tid_address(0x71648dbaca10) = 26877
+26877 09:39:43.572459 set_robust_list(0x71648dbaca20, 24) = 0
+26877 09:39:43.572654 rseq(0x71648dbad060, 0x20, 0, 0x53053053) = 0
+26877 09:39:43.573067 mprotect(0x71648da00000, 16384, PROT_READ) = 0
+26877 09:39:43.573297 mprotect(0x5a8f59d6f000, 4096, PROT_READ) = 0
+26877 09:39:43.573511 mprotect(0x71648dc0a000, 8192, PROT_READ) = 0
+26877 09:39:43.573838 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+26877 09:39:43.574460 munmap(0x71648dbaf000, 109807) = 0
+26877 09:39:43.574815 pipe2([3, 4], 0)  = 0
+26877 09:39:43.575023 pipe2([5, 6], 0)  = 0
+26877 09:39:43.575239 pipe2([7, 8], 0)  = 0
+26877 09:39:43.575520 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x71648dbaca10) = 26878
+26877 09:39:43.576158 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+26878 09:39:43.576215 set_robust_list(0x71648dbaca20, 24) = 0
+26878 09:39:43.576590 dup2(4, 1 <unfinished ...>
+26877 09:39:43.576696 <... clone resumed>, child_tidptr=0x71648dbaca10) = 26879
+26879 09:39:43.576795 set_robust_list(0x71648dbaca20, 24 <unfinished ...>
+26877 09:39:43.576849 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+26879 09:39:43.576902 <... set_robust_list resumed>) = 0
+26878 09:39:43.577066 <... dup2 resumed>) = 1
+26879 09:39:43.577126 dup2(3, 0)        = 0
+26878 09:39:43.577309 close(3 <unfinished ...>
+26877 09:39:43.577381 <... clone resumed>, child_tidptr=0x71648dbaca10) = 26880
+26878 09:39:43.577437 <... close resumed>) = 0
+26877 09:39:43.577573 close(3 <unfinished ...>
+26880 09:39:43.577637 set_robust_list(0x71648dbaca20, 24 <unfinished ...>
+26879 09:39:43.577688 dup2(6, 1 <unfinished ...>
+26880 09:39:43.577763 <... set_robust_list resumed>) = 0
+26878 09:39:43.577827 close(4 <unfinished ...>
+26877 09:39:43.577899 <... close resumed>) = 0
+26879 09:39:43.577974 <... dup2 resumed>) = 1
+26877 09:39:43.578065 close(4 <unfinished ...>
+26880 09:39:43.578137 dup2(5, 0 <unfinished ...>
+26878 09:39:43.578207 <... close resumed>) = 0
+26880 09:39:43.578292 <... dup2 resumed>) = 0
+26877 09:39:43.578338 <... close resumed>) = 0
+26879 09:39:43.578432 close(3 <unfinished ...>
+26877 09:39:43.578534 close(5 <unfinished ...>
+26880 09:39:43.578599 dup2(8, 1 <unfinished ...>
+26879 09:39:43.578640 <... close resumed>) = 0
+26878 09:39:43.578708 close(5 <unfinished ...>
+26877 09:39:43.578770 <... close resumed>) = 0
+26880 09:39:43.578813 <... dup2 resumed>) = 1
+26879 09:39:43.578851 close(4 <unfinished ...>
+26877 09:39:43.578927 close(6 <unfinished ...>
+26880 09:39:43.578977 close(3 <unfinished ...>
+26878 09:39:43.579025 <... close resumed>) = 0
+26877 09:39:43.579106 <... close resumed>) = 0
+26880 09:39:43.579170 <... close resumed>) = 0
+26879 09:39:43.579209 <... close resumed>) = 0
+26877 09:39:43.579283 close(8 <unfinished ...>
+26880 09:39:43.579328 close(4 <unfinished ...>
+26878 09:39:43.579367 close(6 <unfinished ...>
+26877 09:39:43.579442 <... close resumed>) = 0
+26880 09:39:43.579520 <... close resumed>) = 0
+26879 09:39:43.579585 close(5 <unfinished ...>
+26877 09:39:43.579661 openat(AT_FDCWD, "result.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+26880 09:39:43.579747 close(5 <unfinished ...>
+26878 09:39:43.579791 <... close resumed>) = 0
+26880 09:39:43.579866 <... close resumed>) = 0
+26879 09:39:43.579915 <... close resumed>) = 0
+26877 09:39:43.579985 <... openat resumed>) = 3
+26880 09:39:43.580031 close(6 <unfinished ...>
+26878 09:39:43.580079 close(7 <unfinished ...>
+26877 09:39:43.580148 read(7,  <unfinished ...>
+26880 09:39:43.580187 <... close resumed>) = 0
+26879 09:39:43.580231 close(6 <unfinished ...>
+26880 09:39:43.580297 close(7 <unfinished ...>
+26878 09:39:43.580359 <... close resumed>) = 0
+26880 09:39:43.580425 <... close resumed>) = 0
+26879 09:39:43.580476 <... close resumed>) = 0
+26880 09:39:43.580575 close(8 <unfinished ...>
+26878 09:39:43.580631 close(8 <unfinished ...>
+26880 09:39:43.580698 <... close resumed>) = 0
+26879 09:39:43.580751 close(7 <unfinished ...>
+26878 09:39:43.580824 <... close resumed>) = 0
+26880 09:39:43.580925 execve("/home/louis/develop/flutter/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.581071 <... close resumed>) = 0
+26880 09:39:43.581164 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.581239 execve("/home/louis/develop/flutter/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.581398 execve("/home/louis/develop/flutter/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.581520 close(8 <unfinished ...>
+26880 09:39:43.581609 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.581672 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.581754 execve("/home/louis/.nvm/versions/node/v20.18.3/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.581844 <... close resumed>) = 0
+26880 09:39:43.581930 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.581991 execve("/home/louis/develop/flutter/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.582107 execve("/home/louis/.npm-global/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.582199 execve("/home/louis/develop/flutter/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.582374 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.582430 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.582529 execve("/home/louis/.local/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.582637 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.582728 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.582787 execve("/home/louis/.nvm/versions/node/v20.18.3/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.582933 execve("/usr/local/sbin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.583030 execve("/home/louis/develop/flutter/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.583154 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.583219 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.583297 execve("/usr/local/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.583384 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.583474 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.583576 execve("/home/louis/.npm-global/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.583701 execve("/usr/sbin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.583783 execve("/home/louis/.nvm/versions/node/v20.18.3/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.583913 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.583973 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.584052 execve("/usr/bin/sort", ["sort", "-u"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.584150 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.584245 execve("/home/louis/.local/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.584391 execve("/home/louis/.npm-global/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26878 09:39:43.584558 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26879 09:39:43.584633 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.584689 execve("/usr/local/sbin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.584781 execve("/home/louis/.local/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26878 09:39:43.584886 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26879 09:39:43.585104 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.585224 execve("/usr/local/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.585358 execve("/usr/local/sbin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.585445 <... execve resumed>) = 0
+26878 09:39:43.585526 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26879 09:39:43.585587 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.585633 execve("/usr/sbin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.585715 brk(NULL <unfinished ...>
+26879 09:39:43.585759 execve("/usr/local/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.585832 <... brk resumed>) = 0x60649fd4d000
+26878 09:39:43.585868 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26879 09:39:43.585911 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.585954 execve("/usr/bin/cat", ["cat", "/etc/passwd"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26879 09:39:43.586034 execve("/usr/sbin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.586125 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26879 09:39:43.586208 <... execve resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.586325 <... mmap resumed>) = 0x769ac2bb7000
+26879 09:39:43.586390 execve("/usr/bin/cut", ["cut", "-d:", "-f7"], 0x7fffb3ffe698 /* 54 vars */ <unfinished ...>
+26880 09:39:43.586525 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+26880 09:39:43.586898 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+26880 09:39:43.587210 fstat(3,  <unfinished ...>
+26878 09:39:43.587315 <... execve resumed>) = 0
+26880 09:39:43.587412 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=109807, ...}) = 0
+26880 09:39:43.587615 mmap(NULL, 109807, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+26878 09:39:43.587694 brk(NULL <unfinished ...>
+26880 09:39:43.587779 <... mmap resumed>) = 0x769ac2b9c000
+26879 09:39:43.587822 <... execve resumed>) = 0
+26880 09:39:43.587877 close(3 <unfinished ...>
+26878 09:39:43.587941 <... brk resumed>) = 0x5945a7181000
+26880 09:39:43.588019 <... close resumed>) = 0
+26879 09:39:43.588092 brk(NULL <unfinished ...>
+26880 09:39:43.588199 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC <unfinished ...>
+26879 09:39:43.588285 <... brk resumed>) = 0x5d9969152000
+26878 09:39:43.588345 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26880 09:39:43.588443 <... openat resumed>) = 3
+26879 09:39:43.588570 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26878 09:39:43.588626 <... mmap resumed>) = 0x7d80a3462000
+26880 09:39:43.588713 read(3,  <unfinished ...>
+26879 09:39:43.588772 <... mmap resumed>) = 0x753b05742000
+26880 09:39:43.588837 <... read resumed>"\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+26878 09:39:43.588932 access("/etc/ld.so.preload", R_OK <unfinished ...>
+26879 09:39:43.589018 access("/etc/ld.so.preload", R_OK <unfinished ...>
+26880 09:39:43.589074 fstat(3,  <unfinished ...>
+26879 09:39:43.589149 <... access resumed>) = -1 ENOENT (No such file or directory)
+26878 09:39:43.589215 <... access resumed>) = -1 ENOENT (No such file or directory)
+26880 09:39:43.589296 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=5309400, ...}) = 0
+26879 09:39:43.589379 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+26880 09:39:43.589458 mmap(NULL, 5323728, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+26878 09:39:43.589572 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+26880 09:39:43.589648 <... mmap resumed>) = 0x769ac2600000
+26879 09:39:43.589690 <... openat resumed>) = 3
+26880 09:39:43.589744 mmap(0x769ac26b3000, 3358720, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb3000 <unfinished ...>
+26878 09:39:43.589818 <... openat resumed>) = 3
+26879 09:39:43.589867 fstat(3,  <unfinished ...>
+26880 09:39:43.589923 <... mmap resumed>) = 0x769ac26b3000
+26879 09:39:43.590000 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=109807, ...}) = 0
+26878 09:39:43.590069 fstat(3,  <unfinished ...>
+26880 09:39:43.590146 mmap(0x769ac29e7000, 831488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3e7000 <unfinished ...>
+26879 09:39:43.590204 mmap(NULL, 109807, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+26878 09:39:43.590261 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=109807, ...}) = 0
+26880 09:39:43.590363 <... mmap resumed>) = 0x769ac29e7000
+26879 09:39:43.590415 <... mmap resumed>) = 0x753b05727000
+26880 09:39:43.590472 mmap(0x769ac2ab2000, 389120, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4b1000 <unfinished ...>
+26878 09:39:43.590564 mmap(NULL, 109807, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+26879 09:39:43.590613 close(3 <unfinished ...>
+26880 09:39:43.590666 <... mmap resumed>) = 0x769ac2ab2000
+26879 09:39:43.590741 <... close resumed>) = 0
+26878 09:39:43.590815 <... mmap resumed>) = 0x7d80a3447000
+26880 09:39:43.590906 mmap(0x769ac2b11000, 11216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26879 09:39:43.590974 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+26880 09:39:43.591053 <... mmap resumed>) = 0x769ac2b11000
+26878 09:39:43.591124 close(3 <unfinished ...>
+26879 09:39:43.591178 <... openat resumed>) = 3
+26878 09:39:43.591235 <... close resumed>) = 0
+26880 09:39:43.591309 close(3 <unfinished ...>
+26879 09:39:43.591353 read(3,  <unfinished ...>
+26880 09:39:43.591413 <... close resumed>) = 0
+26878 09:39:43.591518 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+26880 09:39:43.591612 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+26879 09:39:43.591666 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+26878 09:39:43.591733 <... openat resumed>) = 3
+26880 09:39:43.591801 <... openat resumed>) = 3
+26879 09:39:43.591863 pread64(3,  <unfinished ...>
+26878 09:39:43.591907 read(3,  <unfinished ...>
+26880 09:39:43.591983 read(3,  <unfinished ...>
+26879 09:39:43.592030 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26880 09:39:43.592109 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+26878 09:39:43.592191 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+26880 09:39:43.592260 pread64(3,  <unfinished ...>
+26879 09:39:43.592305 fstat(3,  <unfinished ...>
+26880 09:39:43.592361 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26878 09:39:43.592440 pread64(3,  <unfinished ...>
+26880 09:39:43.592530 fstat(3,  <unfinished ...>
+26879 09:39:43.592582 <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+26880 09:39:43.592660 <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+26878 09:39:43.592741 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26880 09:39:43.592821 pread64(3,  <unfinished ...>
+26879 09:39:43.592869 pread64(3,  <unfinished ...>
+26880 09:39:43.592924 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26878 09:39:43.593009 fstat(3,  <unfinished ...>
+26879 09:39:43.593068 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26880 09:39:43.593137 mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+26879 09:39:43.593220 mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+26878 09:39:43.593274 <... fstat resumed>{st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+26880 09:39:43.593385 <... mmap resumed>) = 0x769ac2200000
+26879 09:39:43.593455 <... mmap resumed>) = 0x753b05400000
+26880 09:39:43.593552 mmap(0x769ac2228000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+26878 09:39:43.593624 pread64(3,  <unfinished ...>
+26879 09:39:43.593676 mmap(0x753b05428000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+26880 09:39:43.593734 <... mmap resumed>) = 0x769ac2228000
+26878 09:39:43.593808 <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+26880 09:39:43.593896 mmap(0x769ac23b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000 <unfinished ...>
+26879 09:39:43.593976 <... mmap resumed>) = 0x753b05428000
+26880 09:39:43.594044 <... mmap resumed>) = 0x769ac23b1000
+26878 09:39:43.594104 mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+26880 09:39:43.594161 mmap(0x769ac2400000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000 <unfinished ...>
+26879 09:39:43.594198 mmap(0x753b055b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000 <unfinished ...>
+26878 09:39:43.594253 <... mmap resumed>) = 0x7d80a3200000
+26880 09:39:43.594326 <... mmap resumed>) = 0x769ac2400000
+26879 09:39:43.594391 <... mmap resumed>) = 0x753b055b1000
+26878 09:39:43.594451 mmap(0x7d80a3228000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000 <unfinished ...>
+26880 09:39:43.594555 mmap(0x769ac2406000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26879 09:39:43.594608 mmap(0x753b05600000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000 <unfinished ...>
+26880 09:39:43.594685 <... mmap resumed>) = 0x769ac2406000
+26878 09:39:43.594757 <... mmap resumed>) = 0x7d80a3228000
+26879 09:39:43.594824 <... mmap resumed>) = 0x753b05600000
+26880 09:39:43.594879 close(3 <unfinished ...>
+26878 09:39:43.594949 mmap(0x7d80a33b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000 <unfinished ...>
+26880 09:39:43.595025 <... close resumed>) = 0
+26879 09:39:43.595072 mmap(0x753b05606000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26878 09:39:43.595133 <... mmap resumed>) = 0x7d80a33b1000
+26880 09:39:43.595208 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26879 09:39:43.595268 <... mmap resumed>) = 0x753b05606000
+26880 09:39:43.595326 <... mmap resumed>) = 0x769ac2b99000
+26878 09:39:43.595405 mmap(0x7d80a3400000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000 <unfinished ...>
+26880 09:39:43.595513 arch_prctl(ARCH_SET_FS, 0x769ac2b99740 <unfinished ...>
+26879 09:39:43.595571 close(3 <unfinished ...>
+26880 09:39:43.595628 <... arch_prctl resumed>) = 0
+26878 09:39:43.595691 <... mmap resumed>) = 0x7d80a3400000
+26880 09:39:43.595741 set_tid_address(0x769ac2b99a10 <unfinished ...>
+26879 09:39:43.595779 <... close resumed>) = 0
+26880 09:39:43.595826 <... set_tid_address resumed>) = 26880
+26878 09:39:43.595894 mmap(0x7d80a3406000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26880 09:39:43.595971 set_robust_list(0x769ac2b99a20, 24 <unfinished ...>
+26879 09:39:43.596014 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26880 09:39:43.596069 <... set_robust_list resumed>) = 0
+26878 09:39:43.596139 <... mmap resumed>) = 0x7d80a3406000
+26880 09:39:43.596201 rseq(0x769ac2b9a060, 0x20, 0, 0x53053053 <unfinished ...>
+26879 09:39:43.596250 <... mmap resumed>) = 0x753b05724000
+26880 09:39:43.596308 <... rseq resumed>) = 0
+26878 09:39:43.596380 close(3 <unfinished ...>
+26879 09:39:43.596443 arch_prctl(ARCH_SET_FS, 0x753b05724740 <unfinished ...>
+26878 09:39:43.596520 <... close resumed>) = 0
+26879 09:39:43.596596 <... arch_prctl resumed>) = 0
+26879 09:39:43.596702 set_tid_address(0x753b05724a10 <unfinished ...>
+26878 09:39:43.596765 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26880 09:39:43.596842 mprotect(0x769ac2400000, 16384, PROT_READ <unfinished ...>
+26879 09:39:43.596889 <... set_tid_address resumed>) = 26879
+26878 09:39:43.596947 <... mmap resumed>) = 0x7d80a3444000
+26880 09:39:43.597020 <... mprotect resumed>) = 0
+26879 09:39:43.597065 set_robust_list(0x753b05724a20, 24 <unfinished ...>
+26878 09:39:43.597129 arch_prctl(ARCH_SET_FS, 0x7d80a3444740 <unfinished ...>
+26879 09:39:43.597192 <... set_robust_list resumed>) = 0
+26878 09:39:43.597246 <... arch_prctl resumed>) = 0
+26879 09:39:43.597315 rseq(0x753b05725060, 0x20, 0, 0x53053053 <unfinished ...>
+26878 09:39:43.597374 set_tid_address(0x7d80a3444a10 <unfinished ...>
+26879 09:39:43.597440 <... rseq resumed>) = 0
+26878 09:39:43.597523 <... set_tid_address resumed>) = 26878
+26878 09:39:43.597684 set_robust_list(0x7d80a3444a20, 24) = 0
+26879 09:39:43.597881 mprotect(0x753b05600000, 16384, PROT_READ <unfinished ...>
+26878 09:39:43.597948 rseq(0x7d80a3445060, 0x20, 0, 0x53053053 <unfinished ...>
+26879 09:39:43.598034 <... mprotect resumed>) = 0
+26878 09:39:43.598102 <... rseq resumed>) = 0
+26879 09:39:43.598241 mprotect(0x5d9950c39000, 4096, PROT_READ) = 0
+26879 09:39:43.598519 mprotect(0x753b05782000, 8192, PROT_READ <unfinished ...>
+26878 09:39:43.598620 mprotect(0x7d80a3400000, 16384, PROT_READ <unfinished ...>
+26879 09:39:43.598699 <... mprotect resumed>) = 0
+26878 09:39:43.598775 <... mprotect resumed>) = 0
+26879 09:39:43.598912 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+26880 09:39:43.598998 mprotect(0x769ac2ab2000, 376832, PROT_READ <unfinished ...>
+26878 09:39:43.599057 mprotect(0x59457ef44000, 4096, PROT_READ <unfinished ...>
+26879 09:39:43.599113 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+26880 09:39:43.599219 <... mprotect resumed>) = 0
+26878 09:39:43.599294 <... mprotect resumed>) = 0
+26879 09:39:43.599374 munmap(0x753b05727000, 109807 <unfinished ...>
+26878 09:39:43.599431 mprotect(0x7d80a34a2000, 8192, PROT_READ <unfinished ...>
+26880 09:39:43.599548 mprotect(0x60648a7d5000, 4096, PROT_READ <unfinished ...>
+26879 09:39:43.599627 <... munmap resumed>) = 0
+26878 09:39:43.599668 <... mprotect resumed>) = 0
+26880 09:39:43.599734 <... mprotect resumed>) = 0
+26880 09:39:43.599879 mprotect(0x769ac2bf7000, 8192, PROT_READ <unfinished ...>
+26879 09:39:43.599944 getrandom( <unfinished ...>
+26878 09:39:43.599989 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+26880 09:39:43.600060 <... mprotect resumed>) = 0
+26879 09:39:43.600112 <... getrandom resumed>"\x99\xc1\x20\xe3\x8a\xd8\x45\xa1", 8, GRND_NONBLOCK) = 8
+26878 09:39:43.600183 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+26880 09:39:43.600278 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+26879 09:39:43.600325 brk(NULL <unfinished ...>
+26880 09:39:43.600385 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+26878 09:39:43.600456 munmap(0x7d80a3447000, 109807 <unfinished ...>
+26879 09:39:43.600549 <... brk resumed>) = 0x5d9969152000
+26880 09:39:43.600607 munmap(0x769ac2b9c000, 109807 <unfinished ...>
+26879 09:39:43.600677 brk(0x5d9969173000 <unfinished ...>
+26878 09:39:43.600734 <... munmap resumed>) = 0
+26880 09:39:43.600806 <... munmap resumed>) = 0
+26879 09:39:43.600866 <... brk resumed>) = 0x5d9969173000
+26878 09:39:43.600975 getrandom( <unfinished ...>
+26879 09:39:43.601047 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+26880 09:39:43.601162 getrandom( <unfinished ...>
+26878 09:39:43.601233 <... getrandom resumed>"\x36\x0c\x12\x09\x47\x35\xf0\x58", 8, GRND_NONBLOCK) = 8
+26880 09:39:43.601310 <... getrandom resumed>"\xf0\xf9\x29\x32\xc9\x64\x5a\xac", 8, GRND_NONBLOCK) = 8
+26879 09:39:43.601370 <... openat resumed>) = 3
+26880 09:39:43.601429 brk(NULL <unfinished ...>
+26878 09:39:43.601536 brk(NULL <unfinished ...>
+26880 09:39:43.601590 <... brk resumed>) = 0x60649fd4d000
+26879 09:39:43.601630 fstat(3,  <unfinished ...>
+26880 09:39:43.601685 brk(0x60649fd6e000 <unfinished ...>
+26878 09:39:43.601743 <... brk resumed>) = 0x5945a7181000
+26880 09:39:43.601805 <... brk resumed>) = 0x60649fd6e000
+26879 09:39:43.601844 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=5719296, ...}) = 0
+26880 09:39:43.601937 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+26878 09:39:43.602033 brk(0x5945a71a2000 <unfinished ...>
+26880 09:39:43.602090 <... openat resumed>) = 3
+26879 09:39:43.602134 mmap(NULL, 5719296, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+26880 09:39:43.602196 fstat(3,  <unfinished ...>
+26878 09:39:43.602265 <... brk resumed>) = 0x5945a71a2000
+26880 09:39:43.602331 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=5719296, ...}) = 0
+26879 09:39:43.602393 <... mmap resumed>) = 0x753b04e00000
+26880 09:39:43.602457 mmap(NULL, 5719296, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+26878 09:39:43.602558 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+26880 09:39:43.602657 <... mmap resumed>) = 0x769ac1c00000
+26879 09:39:43.602696 close(3 <unfinished ...>
+26878 09:39:43.602743 <... openat resumed>) = 3
+26880 09:39:43.602817 close(3 <unfinished ...>
+26879 09:39:43.602857 <... close resumed>) = 0
+26880 09:39:43.602909 <... close resumed>) = 0
+26878 09:39:43.602979 fstat(3, {st_mode=S_IFREG|0644, st_size=5719296, ...}) = 0
+26879 09:39:43.603198 fadvise64(0, 0, 0, POSIX_FADV_SEQUENTIAL <unfinished ...>
+26880 09:39:43.603612 rt_sigaction(SIGALRM, NULL,  <unfinished ...>
+26878 09:39:43.603679 mmap(NULL, 5719296, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+26880 09:39:43.603755 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26879 09:39:43.603881 <... fadvise64 resumed>) = -1 ESPIPE (Illegal seek)
+26880 09:39:43.603999 rt_sigaction(SIGHUP, NULL,  <unfinished ...>
+26878 09:39:43.604065 <... mmap resumed>) = 0x7d80a2c00000
+26880 09:39:43.604129 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26879 09:39:43.604185 fstat(0,  <unfinished ...>
+26880 09:39:43.604240 rt_sigaction(SIGINT, NULL,  <unfinished ...>
+26878 09:39:43.604301 close(3 <unfinished ...>
+26880 09:39:43.604355 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26879 09:39:43.604408 <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+26880 09:39:43.604477 rt_sigaction(SIGPIPE, NULL,  <unfinished ...>
+26878 09:39:43.604574 <... close resumed>) = 0
+26880 09:39:43.604641 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26879 09:39:43.604700 read(0,  <unfinished ...>
+26880 09:39:43.604752 rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.604919 fstat(1,  <unfinished ...>
+26880 09:39:43.604970 rt_sigaction(SIGTERM, NULL,  <unfinished ...>
+26878 09:39:43.605016 <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+26880 09:39:43.605071 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.605125 openat(AT_FDCWD, "/etc/passwd", O_RDONLY <unfinished ...>
+26880 09:39:43.605195 rt_sigaction(SIGIO, NULL,  <unfinished ...>
+26878 09:39:43.605241 <... openat resumed>) = 3
+26880 09:39:43.605282 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.605341 fstat(3,  <unfinished ...>
+26880 09:39:43.605383 rt_sigaction(SIGPROF, NULL,  <unfinished ...>
+26878 09:39:43.605422 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=3259, ...}) = 0
+26880 09:39:43.605474 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.605585 fadvise64(3, 0, 0, POSIX_FADV_SEQUENTIAL <unfinished ...>
+26880 09:39:43.605641 rt_sigaction(SIGVTALRM, NULL,  <unfinished ...>
+26878 09:39:43.605695 <... fadvise64 resumed>) = 0
+26880 09:39:43.605742 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.605810 mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+26880 09:39:43.605864 rt_sigaction(SIGXCPU, NULL,  <unfinished ...>
+26878 09:39:43.605914 <... mmap resumed>) = 0x7d80a3422000
+26880 09:39:43.605966 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.606041 read(3,  <unfinished ...>
+26880 09:39:43.606088 rt_sigaction(SIGXFSZ, NULL,  <unfinished ...>
+26878 09:39:43.606141 <... read resumed>"root:x:0:0:root:/root:/bin/bash\n"..., 131072) = 3259
+26880 09:39:43.606207 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26878 09:39:43.606308 write(1, "root:x:0:0:root:/root:/bin/bash\n"..., 3259 <unfinished ...>
+26880 09:39:43.606389 rt_sigaction(SIGALRM, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26879 09:39:43.606515 <... read resumed>"root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 3259
+26878 09:39:43.606592 <... write resumed>) = 3259
+26880 09:39:43.606673 <... rt_sigaction resumed>NULL, 8) = 0
+26879 09:39:43.606715 fstat(1,  <unfinished ...>
+26880 09:39:43.606768 rt_sigaction(SIGHUP, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26878 09:39:43.606855 read(3,  <unfinished ...>
+26880 09:39:43.606911 <... rt_sigaction resumed>NULL, 8) = 0
+26879 09:39:43.606944 <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+26880 09:39:43.607015 rt_sigaction(SIGINT, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26878 09:39:43.607098 <... read resumed>"", 131072) = 0
+26880 09:39:43.607178 <... rt_sigaction resumed>NULL, 8) = 0
+26879 09:39:43.607239 read(0,  <unfinished ...>
+26880 09:39:43.607301 rt_sigaction(SIGPIPE, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26878 09:39:43.607382 munmap(0x7d80a3422000, 139264 <unfinished ...>
+26880 09:39:43.607441 <... rt_sigaction resumed>NULL, 8) = 0
+26880 09:39:43.607546 rt_sigaction(SIGQUIT, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26878 09:39:43.607620 <... munmap resumed>) = 0
+26880 09:39:43.607663 <... rt_sigaction resumed>NULL, 8) = 0
+26878 09:39:43.607709 close(3 <unfinished ...>
+26880 09:39:43.607756 rt_sigaction(SIGTERM, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26878 09:39:43.607810 <... close resumed>) = 0
+26880 09:39:43.607852 <... rt_sigaction resumed>NULL, 8) = 0
+26880 09:39:43.607936 rt_sigaction(SIGIO, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26878 09:39:43.607994 close(1 <unfinished ...>
+26880 09:39:43.608043 <... rt_sigaction resumed>NULL, 8) = 0
+26878 09:39:43.608094 <... close resumed>) = 0
+26880 09:39:43.608166 rt_sigaction(SIGPROF, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26879 09:39:43.608236 <... read resumed>"", 4096) = 0
+26880 09:39:43.608296 <... rt_sigaction resumed>NULL, 8) = 0
+26878 09:39:43.608365 close(2 <unfinished ...>
+26880 09:39:43.608420 rt_sigaction(SIGVTALRM, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26879 09:39:43.608511 lseek(0, 0, SEEK_CUR <unfinished ...>
+26880 09:39:43.608582 <... rt_sigaction resumed>NULL, 8) = 0
+26878 09:39:43.608647 <... close resumed>) = 0
+26880 09:39:43.608742 rt_sigaction(SIGXCPU, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26879 09:39:43.608818 <... lseek resumed>) = -1 ESPIPE (Illegal seek)
+26880 09:39:43.608910 <... rt_sigaction resumed>NULL, 8) = 0
+26878 09:39:43.608981 exit_group(0 <unfinished ...>
+26880 09:39:43.609053 rt_sigaction(SIGXFSZ, {sa_handler=0x60648a7c68e0, sa_mask=[HUP INT QUIT PIPE ALRM TERM XCPU XFSZ VTALRM PROF IO], sa_flags=SA_RESTORER, sa_restorer=0x769ac2245330},  <unfinished ...>
+26879 09:39:43.609121 close(0 <unfinished ...>
+26880 09:39:43.609203 <... rt_sigaction resumed>NULL, 8) = 0
+26878 09:39:43.609273 <... exit_group resumed>) = ?
+26880 09:39:43.609349 rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[CHLD], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x769ac2245330},  <unfinished ...>
+26879 09:39:43.609435 <... close resumed>) = 0
+26880 09:39:43.609531 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+26879 09:39:43.609647 write(1, "/bin/bash\n/usr/sbin/nologin\n/usr"..., 896 <unfinished ...>
+26880 09:39:43.609763 sched_getaffinity(0, 128,  <unfinished ...>
+26879 09:39:43.609848 <... write resumed>) = 896
+26880 09:39:43.609937 <... sched_getaffinity resumed>[0 1 2 3 4 5 6 7]) = 8
+26878 09:39:43.610043 +++ exited with 0 +++
+26877 09:39:43.610121 <... read resumed>0x7fffb3ffd550, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+26880 09:39:43.610202 fadvise64(0, 0, 0, POSIX_FADV_SEQUENTIAL <unfinished ...>
+26879 09:39:43.610255 close(1 <unfinished ...>
+26877 09:39:43.610321 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=26878, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+26880 09:39:43.610384 <... fadvise64 resumed>) = -1 ESPIPE (Illegal seek)
+26877 09:39:43.610452 read(7,  <unfinished ...>
+26879 09:39:43.610536 <... close resumed>) = 0
+26880 09:39:43.610606 fstat(0,  <unfinished ...>
+26879 09:39:43.610667 close(2 <unfinished ...>
+26880 09:39:43.610735 <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+26879 09:39:43.610835 <... close resumed>) = 0
+26880 09:39:43.610913 prlimit64(0, RLIMIT_DATA, NULL,  <unfinished ...>
+26879 09:39:43.610986 exit_group(0 <unfinished ...>
+26880 09:39:43.611043 <... prlimit64 resumed>{rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+26879 09:39:43.611104 <... exit_group resumed>) = ?
+26880 09:39:43.611150 prlimit64(0, RLIMIT_AS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+26880 09:39:43.611342 prlimit64(0, RLIMIT_RSS, NULL, {rlim_cur=RLIM64_INFINITY, rlim_max=RLIM64_INFINITY}) = 0
+26880 09:39:43.611552 sysinfo( <unfinished ...>
+26879 09:39:43.611650 +++ exited with 0 +++
+26880 09:39:43.611718 <... sysinfo resumed>{uptime=12650, loads=[289312, 195424, 110944], totalram=8193376256, freeram=171900928, sharedram=456650752, bufferram=158478336, totalswap=4294963200, freeswap=1396015104, procs=1838, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+26877 09:39:43.611803 <... read resumed>0x7fffb3ffd550, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+26880 09:39:43.611855 sysinfo( <unfinished ...>
+26877 09:39:43.611919 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=26879, si_uid=1000, si_status=0, si_utime=0, si_stime=1 /* 0.01 s */} ---
+26880 09:39:43.611997 <... sysinfo resumed>{uptime=12650, loads=[289312, 195424, 110944], totalram=8193376256, freeram=171900928, sharedram=456650752, bufferram=158478336, totalswap=4294963200, freeswap=1396015104, procs=1838, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+26877 09:39:43.612100 read(7,  <unfinished ...>
+26880 09:39:43.612163 mmap(NULL, 16912384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x769ac0bdf000
+26880 09:39:43.612430 fstat(0, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+26880 09:39:43.612694 read(0, "/bin/bash\n/usr/sbin/nologin\n/usr"..., 131072) = 896
+26880 09:39:43.612883 read(0, "", 126976) = 0
+26880 09:39:43.613130 fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+26880 09:39:43.613354 write(1, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+26877 09:39:43.613565 <... read resumed>"/bin/bash\n/bin/false\n/bin/sync\n/"..., 4096) = 64
+26880 09:39:43.613670 munmap(0x769ac0bdf000, 16912384 <unfinished ...>
+26877 09:39:43.613759 write(3, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64 <unfinished ...>
+26880 09:39:43.613867 <... munmap resumed>) = 0
+26877 09:39:43.613993 <... write resumed>) = 64
+26880 09:39:43.614055 lseek(0, 0, SEEK_CUR <unfinished ...>
+26877 09:39:43.614130 read(7,  <unfinished ...>
+26880 09:39:43.614189 <... lseek resumed>) = -1 ESPIPE (Illegal seek)
+26880 09:39:43.614315 close(0)          = 0
+26880 09:39:43.614530 close(1)          = 0
+26877 09:39:43.614685 <... read resumed>"", 4096) = 0
+26880 09:39:43.614746 close(2 <unfinished ...>
+26877 09:39:43.614819 close(7 <unfinished ...>
+26880 09:39:43.614882 <... close resumed>) = 0
+26877 09:39:43.614949 <... close resumed>) = 0
+26877 09:39:43.615050 close(3 <unfinished ...>
+26880 09:39:43.615113 exit_group(0)     = ?
+26877 09:39:43.615362 <... close resumed>) = 0
+26877 09:39:43.615536 openat(AT_FDCWD, "result.txt", O_RDONLY) = 3
+26877 09:39:43.615814 fstat(3, {st_mode=S_IFREG|0644, st_size=64, ...}) = 0
+26877 09:39:43.616114 getrandom( <unfinished ...>
+26880 09:39:43.616184 +++ exited with 0 +++
+26877 09:39:43.616247 <... getrandom resumed>"\x1f\x5f\xc0\x1f\xaa\x6b\x1c\x73", 8, GRND_NONBLOCK) = 8
+26877 09:39:43.616367 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=26880, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+26877 09:39:43.616542 brk(NULL)         = 0x5a8f72495000
+26877 09:39:43.616822 brk(0x5a8f724b6000) = 0x5a8f724b6000
+26877 09:39:43.617054 read(3, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+26877 09:39:43.617261 close(3)          = 0
+26877 09:39:43.617505 fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}) = 0
+26877 09:39:43.617731 write(1, "First 5 lines of result.txt:\n", 29) = 29
+26877 09:39:43.618011 write(1, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+26877 09:39:43.618284 write(1, "Total lines: 5\n", 15) = 15
+26877 09:39:43.618520 wait4(26878, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 26878
+26877 09:39:43.618808 write(1, "child 0 (cat) pid 26878 exited w"..., 45) = 45
+26877 09:39:43.619180 wait4(26879, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 26879
+26877 09:39:43.619599 write(1, "child 1 (cut) pid 26879 exited w"..., 45) = 45
+26877 09:39:43.619925 wait4(26880, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 26880
+26877 09:39:43.621055 write(1, "child 2 (sort) pid 26880 exited "..., 46) = 46
+26877 09:39:43.621685 exit_group(0)     = ?
+26877 09:39:43.622341 +++ exited with 0 +++

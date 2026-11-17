@@ -1,0 +1,214 @@
+33133 execve("./pipeline", ["./pipeline"], 0x7ffff7348278 /* 54 vars */) = 0
+33133 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+33133 close(3)                          = 0
+33133 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+33133 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+33133 close(3)                          = 0
+33133 pipe2([3, 4], 0)                  = 0
+33133 pipe2([5, 6], 0)                  = 0
+33133 pipe2([7, 8], 0)                  = 0
+33133 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x729d9d52da10) = 33140
+33133 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+33140 dup2(4, 1)                        = 1
+33140 close(3 <unfinished ...>
+33133 <... clone resumed>, child_tidptr=0x729d9d52da10) = 33141
+33140 <... close resumed>)              = 0
+33133 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+33140 close(4)                          = 0
+33141 dup2(3, 0)                        = 0
+33140 close(5 <unfinished ...>
+33133 <... clone resumed>, child_tidptr=0x729d9d52da10) = 33142
+33140 <... close resumed>)              = 0
+33133 close(3 <unfinished ...>
+33141 dup2(6, 1 <unfinished ...>
+33133 <... close resumed>)              = 0
+33141 <... dup2 resumed>)               = 1
+33133 close(4 <unfinished ...>
+33142 dup2(5, 0 <unfinished ...>
+33141 close(3 <unfinished ...>
+33133 <... close resumed>)              = 0
+33142 <... dup2 resumed>)               = 0
+33141 <... close resumed>)              = 0
+33133 close(5 <unfinished ...>
+33142 dup2(8, 1 <unfinished ...>
+33141 close(4 <unfinished ...>
+33133 <... close resumed>)              = 0
+33142 <... dup2 resumed>)               = 1
+33140 close(6 <unfinished ...>
+33133 close(6 <unfinished ...>
+33142 close(3 <unfinished ...>
+33141 <... close resumed>)              = 0
+33133 <... close resumed>)              = 0
+33142 <... close resumed>)              = 0
+33140 <... close resumed>)              = 0
+33133 close(8 <unfinished ...>
+33142 close(4 <unfinished ...>
+33141 close(5 <unfinished ...>
+33133 <... close resumed>)              = 0
+33142 <... close resumed>)              = 0
+33140 close(7 <unfinished ...>
+33133 openat(AT_FDCWD, "result.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+33142 close(5 <unfinished ...>
+33141 <... close resumed>)              = 0
+33142 <... close resumed>)              = 0
+33140 <... close resumed>)              = 0
+33142 close(6 <unfinished ...>
+33141 close(6 <unfinished ...>
+33140 close(8 <unfinished ...>
+33133 <... openat resumed>)             = 3
+33142 <... close resumed>)              = 0
+33141 <... close resumed>)              = 0
+33133 read(7,  <unfinished ...>
+33142 close(7 <unfinished ...>
+33140 <... close resumed>)              = 0
+33142 <... close resumed>)              = 0
+33141 close(7 <unfinished ...>
+33142 close(8 <unfinished ...>
+33141 <... close resumed>)              = 0
+33142 <... close resumed>)              = 0
+33141 close(8 <unfinished ...>
+33140 execve("/home/louis/develop/flutter/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 execve("/home/louis/develop/flutter/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... close resumed>)              = 0
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 execve("/home/louis/develop/flutter/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 execve("/home/louis/develop/flutter/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 execve("/home/louis/develop/flutter/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 execve("/home/louis/.nvm/versions/node/v20.18.3/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 execve("/home/louis/.npm-global/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 execve("/home/louis/develop/flutter/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 execve("/home/louis/.nvm/versions/node/v20.18.3/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 execve("/home/louis/.local/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/home/louis/.nvm/versions/node/v20.18.3/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 execve("/usr/local/sbin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 execve("/home/louis/.npm-global/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 execve("/usr/local/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/home/louis/.npm-global/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 execve("/usr/sbin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 execve("/home/louis/.local/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33142 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33142 execve("/usr/bin/sort", ["sort", "-u"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/home/louis/.local/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 execve("/usr/local/sbin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/usr/local/sbin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 execve("/usr/local/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/usr/local/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 execve("/usr/sbin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33140 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/usr/sbin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 execve("/usr/bin/cat", ["cat", "/etc/passwd"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33141 <... execve resumed>)             = -1 ENOENT (No such file or directory)
+33141 execve("/usr/bin/cut", ["cut", "-d:", "-f7"], 0x7fffdb20f368 /* 54 vars */ <unfinished ...>
+33140 <... execve resumed>)             = 0
+33142 <... execve resumed>)             = 0
+33140 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+33141 <... execve resumed>)             = 0
+33142 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+33140 close(3 <unfinished ...>
+33142 <... openat resumed>)             = 3
+33140 <... close resumed>)              = 0
+33140 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+33142 close(3 <unfinished ...>
+33140 read(3,  <unfinished ...>
+33142 <... close resumed>)              = 0
+33140 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+33142 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3
+33141 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+33142 read(3,  <unfinished ...>
+33141 <... openat resumed>)             = 3
+33142 <... read resumed>"\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+33141 close(3)                          = 0
+33141 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+33141 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+33142 close(3)                          = 0
+33142 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+33142 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+33140 close(3)                          = 0
+33141 close(3 <unfinished ...>
+33142 close(3 <unfinished ...>
+33141 <... close resumed>)              = 0
+33142 <... close resumed>)              = 0
+33140 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+33140 close(3)                          = 0
+33140 openat(AT_FDCWD, "/etc/passwd", O_RDONLY <unfinished ...>
+33141 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+33140 <... openat resumed>)             = 3
+33141 <... openat resumed>)             = 3
+33141 close(3)                          = 0
+33140 read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 131072) = 3259
+33140 write(1, "root:x:0:0:root:/root:/bin/bash\n"..., 3259) = 3259
+33140 read(3,  <unfinished ...>
+33141 read(0,  <unfinished ...>
+33140 <... read resumed>"", 131072)     = 0
+33141 <... read resumed>"root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 3259
+33140 close(3 <unfinished ...>
+33141 read(0,  <unfinished ...>
+33140 <... close resumed>)              = 0
+33140 close(1 <unfinished ...>
+33141 <... read resumed>"", 4096)       = 0
+33140 <... close resumed>)              = 0
+33140 close(2 <unfinished ...>
+33141 close(0 <unfinished ...>
+33140 <... close resumed>)              = 0
+33141 <... close resumed>)              = 0
+33141 write(1, "/bin/bash\n/usr/sbin/nologin\n/usr"..., 896) = 896
+33141 close(1)                          = 0
+33141 close(2)                          = 0
+33142 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC <unfinished ...>
+33140 +++ exited with 0 +++
+33142 <... openat resumed>)             = 3
+33133 <... read resumed>0x7fffdb20e220, 4096) = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+33141 +++ exited with 0 +++
+33133 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=33140, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+33133 read(7,  <unfinished ...>
+33142 close(3)                          = 0
+33142 read(0, "/bin/bash\n/usr/sbin/nologin\n/usr"..., 131072) = 896
+33142 read(0, "", 126976)               = 0
+33142 write(1, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+33133 <... read resumed>"/bin/bash\n/bin/false\n/bin/sync\n/"..., 4096) = 64
+33133 write(3, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+33142 close(0 <unfinished ...>
+33133 read(7,  <unfinished ...>
+33142 <... close resumed>)              = 0
+33142 close(1)                          = 0
+33133 <... read resumed>"", 4096)       = 0
+33142 close(2 <unfinished ...>
+33133 close(7 <unfinished ...>
+33142 <... close resumed>)              = 0
+33133 <... close resumed>)              = 0
+33133 close(3)                          = 0
+33133 openat(AT_FDCWD, "result.txt", O_RDONLY) = 3
+33142 +++ exited with 0 +++
+33133 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=33142, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+33133 read(3, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+33133 close(3)                          = 0
+33133 write(1, "First 5 lines of result.txt:\n", 29) = 29
+33133 write(1, "/bin/bash\n/bin/false\n/bin/sync\n/"..., 64) = 64
+33133 write(1, "Total lines: 5\n", 15)  = 15
+33133 wait4(33140, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 33140
+33133 write(1, "child 0 (cat) pid 33140 exited w"..., 45) = 45
+33133 wait4(33141, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 33141
+33133 write(1, "child 1 (cut) pid 33141 exited w"..., 45) = 45
+33133 wait4(33142, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 33142
+33133 write(1, "child 2 (sort) pid 33142 exited "..., 46) = 46
+33133 +++ exited with 0 +++
